@@ -1,0 +1,20 @@
+var box = document.getElementById('box');
+var boxWidth = box.style.width;
+var boxHeight = box.style.height;
+var maxWidth;
+var maxHeight;
+box.addEventListener('mouseover', function(){
+	console.log("Mouse Over");
+	var maxWidth = window.innerWidth;
+	maxWidth -= 100;
+	console.log(maxWidth);
+	var maxHeight = window.innerHeight;
+	maxHeight -= 100;
+	console.log(maxHeight);
+	var getLeft = Math.random() * (maxWidth - 0) + 0;
+	console.log(getLeft);
+	var getTop = Math.random() * (maxHeight - 0) + 0;
+	console.log(getTop);
+	box.style.left = getLeft + 'px';
+	box.style.top = getTop + 'px';
+});
